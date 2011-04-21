@@ -1,0 +1,8 @@
+This program may be used to playback a MIDI file through an external MIDI device
+while listening to a human-chosen track played on a MIDI keyboard. The program
+will then adjust the tempo of other tracks to match the human playing.
+
+The program may be compiled on a Linux system by running 'make' in the src directory.
+The source code of this program is distributed under the BSD license.
+
+Author: Sergey Anufrienko, 2007.
