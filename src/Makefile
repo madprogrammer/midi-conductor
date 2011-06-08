@@ -1,15 +1,14 @@
-CC = c++
-OUT = midi
-SRC = Midi.cpp File.cpp Device.cpp Memory.cpp main.cpp
-OBJS = Midi.o File.o Memory.o Device.o main.o
-CFLAGS = -I../include -g -Wall -O2
-LDFLAGS = -lm -lpthread
+OUT  = midi
+SRC  = Midi.cpp File.cpp Device.cpp Memory.cpp main.cpp
+OBJS = $(SRC:.cpp=.o)
+
+CXXFLAGS   = -I../include -g -Wall -O2
+CXXLDFLAGS = -lm -lpthread
 
 all: $(OUT)
+
 $(OUT): $(OBJS)
-	$(CC) $(LDFLAGS) $(OBJS) -o $(OUT)
-$(OBJS):
-	$(CC) $(CFLAGS) -c $(SRC)
+	$(CXX) $^ $(CXXLDFLAGS) -o $(OUT)
 
 clean:
-	rm -f *.o $(OUT)
+	rm -f $(OBJS) $(OUT)
