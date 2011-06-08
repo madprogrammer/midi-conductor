@@ -9,7 +9,7 @@
 int main(int argc, char * argv[])
 {
 	if (argc == 1) {
-		fprintf(stderr, "usage: %s <device> <midi-file> <human-track-number>\n");
+		fprintf(stderr, "usage: %s <device> <midi-file> <human-track-number>\n", argv[0]);
 		return EXIT_FAILURE;
 	}
 
